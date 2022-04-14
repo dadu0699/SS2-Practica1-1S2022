@@ -37,7 +37,7 @@ view(df_tabla_frecuencias)
 barplot(frecuencia_absoluta, main = "Gráfico de frecuencias absolutas", ylab = "Frecuencias", xlab = "Países")
 
 # Histograma de frecuencia acumulada 
-hist(frecuencia_acumulada, main="Histograma de frecuencias acumuladas", ylab = "Frecuencia", xlab="")
+hist(frecuencia_acumulada, main = "Histograma de frecuencias acumuladas", ylab = "Frecuencia", xlab="")
 
 # Calculando el número de barras como la función hist()
 nbreaks <- pretty(range(frecuencia_acumulada), n = nclass.Sturges(frecuencia_acumulada), min.n = 1)
