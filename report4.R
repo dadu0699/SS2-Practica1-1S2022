@@ -8,7 +8,7 @@ datos_presion_sanguinea <- read.csv("./Data/PresionSanguineaEdad.csv")
 head(datos_presion_sanguinea)
 
 pairs(datos_presion_sanguinea)
-cor(datos_presion_sanguinea)
+view(cor(datos_presion_sanguinea))
 
 # y = Estimate Std(Intercept) + Estimate Std(Edad) x
 # y = 98.7147 + 0.9709x
