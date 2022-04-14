@@ -18,3 +18,6 @@ summary(regresion)
 plot(datos_presion_sanguinea$Edad, datos_presion_sanguinea$Systolic.Blood.Pressure, 
     xlab='Edad', ylab='Presión sanguínea')
 abline(regresion)
+
+nuevas.Edad <- data.frame(Edad = seq(30, 50))
+view(predict(regresion, nuevas.Edad))

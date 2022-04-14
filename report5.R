@@ -20,6 +20,9 @@ plot(datos_pda$Porcentaje.desempleado, datos_pda$Porcentaje.con.ingresos.debajo.
     xlab='Desempleo', ylab='Pobreza')
 abline(regresion)
 
+nuevas.Porcentaje.desempleado <- data.frame(Porcentaje.desempleado = seq(5, 10))
+view(predict(regresion, nuevas.Porcentaje.desempleado))
+
 
 # y = Estimate Std(Intercept) + Estimate Std(Asesinatos.por.1000000.habitantes) x
 # y = 14.05204 + 0.27555x
@@ -29,3 +32,6 @@ summary(regresion2)
 plot(datos_pda$Asesinatos.por.1000000.habitantes, datos_pda$Porcentaje.con.ingresos.debajo.de.5000, 
     xlab='Asesinatos', ylab='Pobreza')
 abline(regresion2)
+
+nuevas.Asesinatos.por.1000000.habitantes <- data.frame(Asesinatos.por.1000000.habitantes = seq(30, 50))
+view(predict(regresion2, nuevas.Asesinatos.por.1000000.habitantes))
