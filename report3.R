@@ -38,6 +38,7 @@ frecuencia_relativa_acumulada <- cumsum(frecuencia_relativa)
 # Creacion de un data frame con los resultados obtenidos
 tabla_frecuencias <- cbind(frecuencia_absoluta, frecuencia_acumulada, frecuencia_relativa, frecuencia_relativa_acumulada)
 df_tabla_frecuencias <- data.frame(tabla_frecuencias)
+row.names(df_tabla_frecuencias) <- filtro_edad$Age
 view(df_tabla_frecuencias)
 
 # Histograma de frecuencia absoluta 
